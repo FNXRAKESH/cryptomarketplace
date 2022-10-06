@@ -1,0 +1,199 @@
+#borrow{
+
+.intl-tel-input{
+    width:100%;
+}
+.borrowValue{
+    background-color: #fff;
+    padding:20px;
+    margin-bottom: 3px;
+    width: 100%;
+    cursor: pointer;
+    p{text-align: center; margin-bottom: 0;}
+}
+button{
+    width: 300px;
+    border-radius: 20px;
+    background-color: #459bb9;
+    color:#fff;
+    margin-top: 20px;
+}
+.borrowItem{
+    box-shadow: 15px 15px 20px #eeeff8;
+    width: 300px;
+    margin:0 auto;
+    background-color: transparent;
+}
+.borrowItemInput{
+    width: 300px;
+    margin: 0 auto;
+    background-color: transparent;
+    label{font-size: 11px;}
+    span{
+        border-top-left-radius: 15px;
+            
+            border-bottom-left-radius: 15px;
+            background-color: #fff;
+           
+            
+    }
+    input{
+        border-top-right-radius: 15px;
+            
+            border-bottom-right-radius: 15px;
+            outline: none;
+            box-shadow: none;
+    }
+}
+.borrowItemInputTwo{
+    width: 300px;
+        margin: 0 auto;
+        background-color: transparent;
+    input {
+            border-top-left-radius: 15px;
+            ;
+            border-bottom-left-radius: 15px;
+            outline: none;
+                box-shadow: none;
+    
+        }
+    
+        span {
+            border-top-right-radius: 15px;
+            
+            border-bottom-right-radius: 15px;
+        background-color: #fff;
+        width: 80px;
+        }
+}
+.borrowItemInputThree {
+    width: 300px;
+    margin: 0 auto;
+    background-color: transparent;
+    input {
+        border-radius: 15px;
+        outline: none;
+        box-shadow: none;
+    }
+}
+  .borrowItemInputFour{
+    width: 500px;
+    margin: 0 auto;
+    background-color: transparent;
+    input {
+            border-radius: 15px;
+            outline: none;
+            box-shadow: none;
+        }
+  }
+  .bankList{
+    cursor: pointer;
+    .bankLogo{
+        background-color: #eeeff8;
+        height:30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+  }
+  .security{
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    padding:10px 15px;
+    width: fit-content;
+    margin:15px auto;
+  }
+  .verify{
+    width:500px;
+li{
+    padding:6px 0;
+}
+  
+  .verifyId{
+    border : 2px dashed #459bb9;
+    border-radius: 10px;
+  }
+  .upload{
+    border: 2px solid #459bb9;
+    border-radius: 30px;
+     background-color: #d8e9f1;
+  }
+  .preCheck{
+        position: relative;
+      .Success{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 15px;
+        padding: 10px;
+        h5 {
+                margin-bottom: 0;
+            }
+        
+            p {
+               
+                margin: 0
+            }
+      }
+       .Success::before {
+           content: "\f00c";
+           font-family: 'Font Awesome\ 5 Free';
+           font-weight: 900;
+           color: #fff;
+           background-color: #459bb9;
+           padding: 4px 6px;
+           border-radius: 50%;
+           position: absolute;
+           left: -40px;
+           top: 12px;
+           font-size: 10px;
+       }
+       .failed {
+           display: flex;   
+           align-items: center;
+           justify-content: space-between;
+           position: relative;
+           background-color: #f4e6ea;
+           margin-bottom: 10px;
+           padding: 10px;
+           border-radius: 10px;
+           h5{
+            margin-bottom: 0;
+           }
+           p{color:#f35959; margin:0; font-weight: bold;}
+       }
+       .failed::before{
+        content:'';
+           background-color: #fff;
+           position: absolute;
+           left:-40px;
+           top:12px;
+            border-radius: 50%;
+            border :2px solid #f35959;
+            height:22px;
+            width:22px
+       }
+  }
+  .preCheck::before{
+    content: "";
+    height:85%;
+    width:2px;
+    background-color: #e5e5e5;
+    position: absolute;
+    left:-30px;
+    top:20px;
+}
+}.benefits{
+  width: 250px;
+  position: relative;
+}
+.benefits p::before{
+    content: "";
+    position: absolute;
+    content: "\f105";
+        font-family: 'Font Awesome\ 5 Free';
+        font-weight: 900;
+        left:-30px;
+        color: #459bb9;
+}
+}
