@@ -4,15 +4,12 @@ import './Requirements.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faAngleRight,
-  faArrowRight,
   faCamera,
   faLock,
-  faSearch,
-  faUnlockKeyhole
+  faSearch
 } from '@fortawesome/free-solid-svg-icons';
 
 var iti;
-
 const bankList = [
   {
     bankLogo: '',
@@ -51,7 +48,8 @@ const Requirements = () => {
   const [verifyIdentitySelected, setVerifyIdentitySelected] = useState(false);
   const [verifyIncomeSelected, setVerifyIncomeSelected] = useState(false);
   const [verifyAddressSelected, setVerifyAddressSelected] = useState(false);
-  const [preCheckSelected, setPreCheckSelected] = useState(true);
+  const [preCheckSelected, setPreCheckSelected] = useState(false);
+  const [ApplicationSelected, setApplicationSelected] = useState(false);
 
   useEffect(() => {
     if (reachYouSelected) {
@@ -64,50 +62,49 @@ const Requirements = () => {
     }
   }, [reachYouSelected]);
   const handleUplaod = () => {
-    var fileSelector = document.querySelector('#verifyId')
+    var fileSelector = document.querySelector('#verifyId');
     fileSelector.click();
-   
-  }
-const handleUploadChange = (e) => {
-  console.log(e.target.files[0]);
-  var file = e.target.files[0];
-  setVerifyIdentity(file);
-  // var reader = new FileReader();
-  // reader.readAsText(file, 'UTF-8');
+  };
+  const handleUploadChange = (e) => {
+    console.log(e.target.files[0]);
+    var file = e.target.files[0];
+    setVerifyIdentity(file);
+    // var reader = new FileReader();
+    // reader.readAsText(file, 'UTF-8');
 
-  // // here we tell the reader what to do when it's done reading...
-  // reader.onload = (readerEvent) => {
-  //   var content = readerEvent.target.result; // this is the content!
-  //   console.log(content);
-  // };
-};
-  const handleUplaodIncomeOne= () => {
+    // // here we tell the reader what to do when it's done reading...
+    // reader.onload = (readerEvent) => {
+    //   var content = readerEvent.target.result; // this is the content!
+    //   console.log(content);
+    // };
+  };
+  const handleUplaodIncomeOne = () => {
     var fileSelector = document.querySelector('#verifyIncomeOne');
     fileSelector.click();
   };
   const handleUploadIncomeOneChange = (e) => {
-     console.log(e.target.files[0]);
-     var file = e.target.files[0];
-     setVerifyIncomeOne(file);
-  }
-   const handleUplaodIncomeTwo = () => {
-     var fileSelector = document.querySelector('#verifyIncomeOne');
-     fileSelector.click();
-   };
-   const handleUploadIncomeTwoChange = (e) => {
-     console.log(e.target.files[0]);
-     var file = e.target.files[0];
-     setVerifyIncomeTwo(file);
+    console.log(e.target.files[0]);
+    var file = e.target.files[0];
+    setVerifyIncomeOne(file);
   };
-   const handleUplaodAddress = () => {
-     var fileSelector = document.querySelector('#verifyAddress');
-     fileSelector.click();
-   };
-   const handleUploadAddressChange = (e) => {
-     console.log(e.target.files[0]);
-     var file = e.target.files[0];
-     setVerifyAddress(file);
-   };
+  const handleUplaodIncomeTwo = () => {
+    var fileSelector = document.querySelector('#verifyIncomeOne');
+    fileSelector.click();
+  };
+  const handleUploadIncomeTwoChange = (e) => {
+    console.log(e.target.files[0]);
+    var file = e.target.files[0];
+    setVerifyIncomeTwo(file);
+  };
+  const handleUplaodAddress = () => {
+    var fileSelector = document.querySelector('#verifyAddress');
+    fileSelector.click();
+  };
+  const handleUploadAddressChange = (e) => {
+    console.log(e.target.files[0]);
+    var file = e.target.files[0];
+    setVerifyAddress(file);
+  };
 
   return (
     <div id="borrow">
@@ -1064,6 +1061,7 @@ const handleUploadChange = (e) => {
                 type="button"
                 onClick={() => {
                   setVerifyAddressSelected(false);
+                  setPreCheckSelected(true);
                 }}
               >
                 Continue
@@ -1123,7 +1121,8 @@ const handleUploadChange = (e) => {
                 className="btn"
                 type="button"
                 onClick={() => {
-                  setVerifyAddressSelected(false);
+                  setPreCheckSelected(false);
+                  setBorrowSelected(true);
                 }}
               >
                 Take Me Back
@@ -1132,7 +1131,8 @@ const handleUploadChange = (e) => {
                 className="btn btn-link text-info pt-3"
                 type="button"
                 onClick={() => {
-                  setVerifyAddressSelected(false);
+                  setPreCheckSelected(false);
+                  setApplicationSelected(true)
                 }}
               >
                 Submit Now and Upload Later
@@ -1140,14 +1140,66 @@ const handleUploadChange = (e) => {
               <h6 className="text-center pt-5">
                 Benefits of Completing Your Application Now
               </h6>
-              <div className='benefits pb-5'>
+              <div className="benefits pb-5">
                 <p>No branch visits required</p>
-                <p>Completing an application doesn't affect your credit score</p>
+                <p>
+                  Completing an application doesn't affect your credit score
+                </p>
                 <p>Get your money within 24 hours</p>
               </div>
             </div>
           </div>
         </FadeInOut>
+      ) : null}
+      {ApplicationSelected ? (
+        <div className="row p-5">
+          <div className="col-md-6">
+            <h1>Application Successful!</h1>
+            <p className="text-info">Confirmation Number: V0DL8A</p>
+            <p>
+              We have received your application and one of our agents will
+              contact you on the next business day.
+            </p>
+            <p>If you have any questions, please call 1-888-781-8439</p>
+          </div>
+          <div className="col-md-6">
+            <div className="recommend">
+              <h5 className="title">We Recommend:</h5>
+              <div className="row px-4">
+                <div className="col">
+                  <img
+                    src="https://mms.businesswire.com/media/20221006005403/en/1594054/5/neo-logo-black.jpg"
+                    alt="neo"
+                    height={20}
+                  />
+                </div>
+                <div className="col">
+                  <h5>Neo Financial Secure Mastercard</h5>
+                </div>
+              </div>
+              <div className="px-5">
+                <p className="Success">
+                  Guaranteed approval and you can start using your card today
+                </p>
+                <p className="Success">
+                  Earn enormous bonuses - like 15% cashback - on your first time purchase at most partners
+                </p>
+                <p className="Success">
+                  Earn an average of 5% cashback at thousands of partners and at least 1% cashback guaranteed
+                </p>
+                <p className="Success">
+                  No annual or monthly fees
+                </p>
+                <button className='btn'>Apply Now</button>
+                <p className='py-4'>Card issued by ATB Financial pursuant to license by Mastercard International Inc. Mastercard is a registered trademark and the circles design is a trademark of Mastercard International Inc.<br />
+                  Must be 1. age of majority in your province or territory of residence; 2. Canadian resident; 3. provide security funds.<br />
+                  Average based on current offers at select partners. Cashback varies per plan, offer and partner.<br />
+                  Top-up is limited to $5,000 of spending per month at non-partner.<br />
+                21 day grace period; Minimum payment si the higher of $10.00 or 5.0% of total statement balance; Purchase rate (19.99% - 24.99%) and cash advance rate (21.99% - 26.99%)</p>
+              </div>
+            </div>
+          </div>
+        </div>
       ) : null}
     </div>
   );

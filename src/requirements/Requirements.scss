@@ -196,4 +196,45 @@ li{
         left:-30px;
         color: #459bb9;
 }
+.recommend{
+    border: 2px solid #459bb9;
+    border-radius: 10px;
+    overflow: hidden;
+    .title{
+        text-align: center;
+        background-color: #e1eaf7;
+        padding:10px;
+         
+    }
+    .Success {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 15px;
+            padding: 10px;
+            margin: 0
+           
+        }
+    
+        .Success::before {
+            content: "\f00c";
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            color: #fff;
+            background-color: #459bb9;
+            padding: 4px 6px;
+            border-radius: 50%;
+            position: absolute;
+            left: -20px;
+            top: 12px;
+            font-size: 8px;
+        }
+}
+}
+
+@media only screen and (max-width:576px){
+    #borrow{
+        button{width:100% !important}
+    }
 }
