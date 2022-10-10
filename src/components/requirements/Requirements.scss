@@ -235,6 +235,7 @@ li{
 
 @media only screen and (max-width:576px){
     #borrow{
-        button{width:100% !important}
+        .borrowItemInputFour,.verify,button
+        {width:100% !important}    
     }
 }

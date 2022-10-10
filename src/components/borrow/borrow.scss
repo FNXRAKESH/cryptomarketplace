@@ -1,0 +1,28 @@
+#borrowAsset{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h3{
+        box-shadow: 2px 2px 20px #bebebe;
+        padding:10px 30px;
+        border-radius: 30px;
+background-color: #fff;
+
+    }
+    .input-group{
+        width:300px
+    }
+    input{
+        border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            box-shadow: none;
+            
+    }
+    span{
+        border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding:10px 30px
+    }
+}

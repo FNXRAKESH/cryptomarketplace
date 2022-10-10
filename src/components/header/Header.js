@@ -1,5 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const Header = () => {
+  const navigate = useNavigate();
     return (
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
@@ -30,21 +33,15 @@ const Header = () => {
                   Products
                 </a>
                 <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Action
-                    </a>
+                  <li onClick={() => navigate('/borrow')}>
+                    <span className="dropdown-item">Borrow</span>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/">
-                      Another action
-                    </a>
+                    <span className="dropdown-item">Sell</span>
                   </li>
 
                   <li>
-                    <a className="dropdown-item" href="/">
-                      Something else here
-                    </a>
+                    <span className="dropdown-item">Transfer</span>
                   </li>
                 </ul>
               </li>

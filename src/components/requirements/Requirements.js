@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import FadeInOut from '../FadeInOut';
+import FadeInOut from '../../FadeInOut';
 import './Requirements.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -767,20 +767,24 @@ const Requirements = () => {
                   value={reachYou}
                   placeholder="Phone number"
                 />
-                <div class="form-check py-3">
+                <div className="form-check py-3">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="radio"
                     name="code"
                     checked
                   />
-                  <label class="form-check-label" for="code">
+                  <label className="form-check-label" htmlFor="code">
                     Send me a code by text message
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="code" />
-                  <label class="form-check-label" for="code">
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name="code"
+                  />
+                  <label className="form-check-label" htmlFor="code">
                     Call me with a code
                   </label>
                 </div>
@@ -820,13 +824,13 @@ const Requirements = () => {
                     Select an institution below to authorize a secure connection
                   </small>
                 </p>
-                <div class="input-group mb-3 shadow-sm">
-                  <span class="input-group-text" id="basic-addon2">
+                <div className="input-group mb-3 shadow-sm">
+                  <span className="input-group-text" id="basic-addon2">
                     <FontAwesomeIcon icon={faSearch} />
                   </span>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Search"
                   />
                 </div>
@@ -1132,7 +1136,7 @@ const Requirements = () => {
                 type="button"
                 onClick={() => {
                   setPreCheckSelected(false);
-                  setApplicationSelected(true)
+                  setApplicationSelected(true);
                 }}
               >
                 Submit Now and Upload Later
@@ -1182,20 +1186,34 @@ const Requirements = () => {
                   Guaranteed approval and you can start using your card today
                 </p>
                 <p className="Success">
-                  Earn enormous bonuses - like 15% cashback - on your first time purchase at most partners
+                  Earn enormous bonuses - like 15% cashback - on your first time
+                  purchase at most partners
                 </p>
                 <p className="Success">
-                  Earn an average of 5% cashback at thousands of partners and at least 1% cashback guaranteed
+                  Earn an average of 5% cashback at thousands of partners and at
+                  least 1% cashback guaranteed
                 </p>
-                <p className="Success">
-                  No annual or monthly fees
+                <p className="Success">No annual or monthly fees</p>
+                <button className="btn">Apply Now</button>
+                <p className="py-4">
+                  Card issued by ATB Financial pursuant to license by Mastercard
+                  International Inc. Mastercard is a registered trademark and
+                  the circles design is a trademark of Mastercard International
+                  Inc.
+                  <br />
+                  Must be 1. age of majority in your province or territory of
+                  residence; 2. Canadian resident; 3. provide security funds.
+                  <br />
+                  Average based on current offers at select partners. Cashback
+                  varies per plan, offer and partner.
+                  <br />
+                  Top-up is limited to $5,000 of spending per month at
+                  non-partner.
+                  <br />
+                  21 day grace period; Minimum payment si the higher of $10.00
+                  or 5.0% of total statement balance; Purchase rate (19.99% -
+                  24.99%) and cash advance rate (21.99% - 26.99%)
                 </p>
-                <button className='btn'>Apply Now</button>
-                <p className='py-4'>Card issued by ATB Financial pursuant to license by Mastercard International Inc. Mastercard is a registered trademark and the circles design is a trademark of Mastercard International Inc.<br />
-                  Must be 1. age of majority in your province or territory of residence; 2. Canadian resident; 3. provide security funds.<br />
-                  Average based on current offers at select partners. Cashback varies per plan, offer and partner.<br />
-                  Top-up is limited to $5,000 of spending per month at non-partner.<br />
-                21 day grace period; Minimum payment si the higher of $10.00 or 5.0% of total statement balance; Purchase rate (19.99% - 24.99%) and cash advance rate (21.99% - 26.99%)</p>
               </div>
             </div>
           </div>
